@@ -1,6 +1,6 @@
 package CheckOut6;
 
-public class CheckOut { // 교수님이 작성하신 코드
+public class CheckOut { // 교수님이 강의 시간에 작성하신 코드
 
     int totalPrice = 50000;
     private String memberType;
