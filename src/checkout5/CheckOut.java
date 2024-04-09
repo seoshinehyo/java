@@ -17,6 +17,9 @@ public class CheckOut { // 실습2
 
         CheckOut checkout3 = new CheckOut("VVIP");
         checkout3.calculate(checkout3.memberType, checkout3.totalPrice);
+
+        CheckOut checkout4 = new CheckOut("VVVIP");
+        checkout4.calculate(checkout4.memberType, checkout4.totalPrice);
     }
     public void calculate(String memberType, int totalPrice) {
         MemberType memberTypeFactory = TypeStore.findType(memberType);

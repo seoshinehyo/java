@@ -9,7 +9,7 @@ public class TypeStore {
         } else if (memberType.equals(("VVIP"))) {
             return new VVIP();
         } else {
-            return new VVIP();
+            return new VVVIP();
         }
     }
 }
