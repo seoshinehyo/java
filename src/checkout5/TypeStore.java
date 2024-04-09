@@ -6,7 +6,7 @@ public class TypeStore {
             return new VIP();
         } else if (memberType.equals("FAMILY")) {
             return new Family();
-        } else {
+        } else if (memberType.equals(("VVIP"))){
             return new VVIP();
         }
     }
