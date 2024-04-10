@@ -8,8 +8,10 @@ public class TypeStore {
             return new Family();
         } else if (memberType.equals(("VVIP"))) {
             return new VVIP();
-        } else {
+        } else if (memberType.equals("VVVIP")) {
             return new VVVIP();
+        } else {
+            return new Diamond();
         }
     }
 }
