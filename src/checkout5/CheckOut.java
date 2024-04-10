@@ -1,6 +1,6 @@
 package checkout5;
 
-public class CheckOut { // 실습2
+public class CheckOut { // 실습2(발표 버전)
     String memberType;
     int totalPrice = 50000;
 
