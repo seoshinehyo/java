@@ -20,6 +20,9 @@ public class CheckOut { // 실습2(발표 버전)
 
         CheckOut checkout4 = new CheckOut("VVVIP");
         checkout4.calculate(checkout4.memberType, checkout4.totalPrice);
+
+        CheckOut checkout5 = new CheckOut("Diamond");
+        checkout5.calculate(checkout5.memberType, checkout5.totalPrice);
     }
     public void calculate(String memberType, int totalPrice) {
         MemberType memberTypeFactory = TypeStore.findType(memberType);
