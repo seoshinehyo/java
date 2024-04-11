@@ -11,7 +11,7 @@ public class CheckOutSolution {
         System.out.println("할인 적용 후: " + afterTotal);
     }
 
-    // solution2 : enum
+    // solution2 : enum, enum 사용법 공부하기
     public void calcDiscount2(MemberType memberType) {
         int afterTotal = memberType.calc(totalPrice);
         System.out.println("합계: " + totalPrice);
