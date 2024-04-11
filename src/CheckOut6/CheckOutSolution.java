@@ -5,7 +5,7 @@ public class CheckOutSolution {
 
 
     // solution1 :
-    public void calcDiscount(DiscountPolicy policy) {
+    public void calcDiscount(DiscountPolicy policy) { // calcDiscount
         int afterTotal = policy.calc(totalPrice);
         System.out.println("합계: " + totalPrice);
         System.out.println("할인 적용 후: " + afterTotal);
