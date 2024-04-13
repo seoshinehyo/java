@@ -85,7 +85,7 @@ public class ThreeWayMergeSort {
             }
         }
 
-        // 첫번째, 세번째 배열 비교
+        // 첫번째, 세번째 배열 비교,
         while ((i < mid1) && (k < high)) {
             if (S[i].compareTo(S[k]) < 0) {
                 U[l++] = S[i++];
