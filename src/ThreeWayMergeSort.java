@@ -30,7 +30,7 @@ public class ThreeWayMergeSort {
     public static void mergeSortRec(Integer[] U, int low, int high, Integer[] V)
     {
         if (high - low < 2) {
-            return; // 배열 size가 1이면 종료
+            return; // 배열 size가 1이면 종료 (1이면 정렬할 필요가 없음)
         }
 
         // mid1, mid2를 사용해 배열 3개로 Devide
