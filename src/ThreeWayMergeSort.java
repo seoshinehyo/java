@@ -3,7 +3,7 @@ public class ThreeWayMergeSort {
 
     public static void main(String args[]) {
         Integer[] S = new Integer[] {1, 3, 6, 2, 8, 5, 4, 9, 7}; // 정렬되지 않은 배열 S 선언
-        mergeSort(S);
+        mergeSort(S); // mergeSort 호출
         System.out.print("정렬된 배열 S : ");
         for (int i = 0; i < S.length; i++) {
             System.out.print(S[i] + " ");
