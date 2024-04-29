@@ -23,6 +23,6 @@ public class CoinChange {
                 table[i][j] = use + notUse;
             }
         }
-        return table[N][m - 1]; // 최종 결과
+        return table[N][m - 1]; // 최종 결과 리턴
     }
 }
