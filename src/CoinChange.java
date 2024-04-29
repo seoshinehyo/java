@@ -1,5 +1,4 @@
 public class CoinChange {
-    // 202034723 컴퓨터공학전공 서상효
     // 주어진 동전의 value를 담은 배열 S[]와 거슬러 줘야 할 금액 N이 주어졌을 때, 거스름돈을 구성하는 방법의 수를 반환하는 프로그램
 
     public static void main(String[] args) {
