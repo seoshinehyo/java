@@ -5,7 +5,7 @@ public class CoinChange {
         int[] S = {1, 2, 3}; // 배열 S 선언
         int m = S.length; // m은 배열 S의 크기
         int N = 4; // 주어진 금액 N(input size)
-        System.out.println(count(S, m, N));
+        System.out.println(count(S, m, N)); // 최종 결과 출력
     }
 
     public static int count(int[] S, int m, int N) {
