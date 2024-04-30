@@ -18,7 +18,7 @@ public class ThreeWayMergeSort {
         Integer[] U = new Integer[S.length]; // 배열 S 크기만큼의 배열 U 선언
 
         for (int i = 0; i < U.length; i++) {
-            U[i] = S[i]; // 배열 copy
+            U[i] = S[i]; // 배열 복사
         }
 
         // sort function
