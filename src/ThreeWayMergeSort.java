@@ -45,8 +45,7 @@ public class ThreeWayMergeSort {
         merge(V, low, mid1, mid2, high, U); // 정렬된 3개의 배열 합치기
     }
 
-    public static void merge(Integer[] S, int low, int mid1, int mid2, int high, Integer[] U)
-    {
+    public static void merge(Integer[] S, int low, int mid1, int mid2, int high, Integer[] U) {
         int i = low, j = mid1, k = mid2, l = low;
 
         // 3개의 배열 중 가장 작은 값 넣기
