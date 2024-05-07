@@ -1,7 +1,7 @@
-package creational_patterns.factory.v1;
+package creational_patterns.factory.v2;
 
 public class VehicleFactory {
-    public static Vehicle createNew(Vtype type) {    // 인자를 받아 판단
+    public static Vehicle createNew(Vtype type) {
 //        switch (type) {
 //            case CAR:
 //                return new Car();
@@ -17,5 +17,3 @@ public class VehicleFactory {
 
     }
 }
-
-// Control Coupling이 생김
