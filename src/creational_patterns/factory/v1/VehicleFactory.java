@@ -15,6 +15,8 @@ public class VehicleFactory {
             case TRUCK -> new Truck();
         };
 
+
+
     }
 }
 
