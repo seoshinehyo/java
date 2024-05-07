@@ -10,7 +10,7 @@ public class VehicleFactory {
 //            default:
 //                return null;
 //        }
-        return switch (type) {
+        return switch (type) {  // 새로운 switch문
             case CAR -> new Car();
             case TRUCK -> new Truck();
         };
