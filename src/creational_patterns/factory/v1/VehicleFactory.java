@@ -19,6 +19,7 @@ public class VehicleFactory {
         return switch (type) {
             case CAR -> new Car();
             case TRUCK -> new Truck();
+            case BUS -> new Bus();
         };
 
 
