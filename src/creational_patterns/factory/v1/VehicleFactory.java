@@ -16,7 +16,7 @@ public class VehicleFactory {
 //            case TRUCK -> new Truck();
 //        };
 
-        return switch (type) {
+        return switch (type) { // Factory에서 리턴
             case CAR -> new Car();
             case TRUCK -> new Truck();
             case BUS -> new Bus();
