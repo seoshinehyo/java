@@ -1,6 +1,6 @@
 package gof.strategy.v1;
 
-public class CarSystem {
+public class CarSystem { // 속도에 맞게 안전장치 대처 작동 -> if else문 사용
     void saftyAction(String mode) {
             // 각 조건에 따른 실행은 별도 메서드로 만들어질 수 있음.
             if(mode.equals("case1")) {
@@ -10,6 +10,7 @@ public class CarSystem {
             } else if(mode.equals("case3")) {
                 System.out.println("## 속도 줄임!!");
             }
+            // 케이스가 늘어나면 if-else문 길어짐 -> SaftyMode 인터페이스 만들기
     }
 
     public static void main(String[] args) {
