@@ -37,49 +37,51 @@ public class Knapsack {
         bestSet = new int[n];
         include = new int[n];
 
-        knapsack(0, 0, 0, w, p, W, n);
+        knapsack(0, 0, 0, w, p, W, n); // index, profit, weight의 초기값은 전부 0
 
         // 결과 출력
         System.out.println("Optimal solution: " + Arrays.toString(bestSet).replaceAll("[\\[\\],]", ""));
         System.out.println("Maximum profit: " + maxProfit);
     }
 
-    // 백트래킹 함수
+    // Backtracking Method
     public static void knapsack(int i, int profit, int weight, int[] w, int[] p, int W, int n) {
         if (weight <= W && profit > maxProfit) {
             maxProfit = profit;
-            System.arraycopy(include, 0, bestSet, 0, n);
+            numBest = i;
+            bestSet = include.clone(); // include 배열을 bestSet 배열로 복사
         }
 
-        if (promising(i, weight, w, p, W, n)) {
-            if (i < n) { // 배열 범위를 넘지 않도록 체크
-                include[i] = 1; // 현재 항목 포함
-                knapsack(i + 1, profit + p[i], weight + w[i], w, p, W, n);
-                include[i] = 0; // 현재 항목 포함하지 않음
-                knapsack(i + 1, profit, weight, w, p, W, n);
-            }
+        if (promising(i, profit, weight, w, p, W, n)) {
+            include[i] = 1; // 해당 item 포함하면 1, include 배열의 0번째 index부터 값을 넣어야 되므로 include[i + 1]이 아닌 include[i] 사용
+            // 왼쪽 노드, i + 1을 불러 recursion을 하는 것이 맞는데, 배열 p에 0번째 요소부터 profit 값이 들어있으므로 ppt처럼 p[i + 1]과 w[i + 1]을 더하는 것이 아닌 p[i]값과 w[i]값을 더해주는 것이 맞음
+            knapsack(i + 1, profit + p[i], weight + w[i], w, p, W, n);
+            include[i] = 0; // 해당 item 포함하지 않으면 0
+            knapsack(i + 1, profit, weight, w, p, W, n); // 해당 item 포함하지 않고 오른쪽 노드로
+
         }
     }
 
-    // 유망한지 검사하는 함수
-    public static boolean promising(int i, int weight, int[] w, int[] p, int W, int n) {
-        if (weight >= W) return false;
+    // promissing한지 검사하는 메서드
+    public static boolean promising(int i, int profit, int weight, int[] w, int[] p, int W, int n) {
+        if (weight >= W) {
+            return false; // 무게 제한을 초과한 경우
+        }
         int j = i;
         int totWeight = weight;
-        double bound = 0;
+        double bound = profit;
 
-        // 현재 노드의 유망성을 결정하는 범위 계산
+        // 남은 항목들의 이익을 무게에 맞게 추가함
         while (j < n && totWeight + w[j] <= W) {
             totWeight += w[j];
             bound += p[j];
             j++;
         }
 
-        // 남은 부분 중 일부를 더함
+        // 쪼갤 수 있기때문에, W 여유값이 있으면 쪼개서 bound 값에 더해줌
         if (j < n) {
-            bound += (W - totWeight) * ((double)p[j] / w[j]);
+            bound += (W - totWeight) * ((double) p[j] / w[j]);
         }
-
-        return bound + maxProfit > maxProfit;
+        return bound > maxProfit;
     }
 }
