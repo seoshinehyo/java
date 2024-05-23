@@ -62,7 +62,7 @@ public class Knapsack {
         }
     }
 
-    // promissing한지 검사하는 메서드
+    // promising한지 검사하는 메서드
     public static boolean promising(int i, int profit, int weight, int[] w, int[] p, int W, int n) {
         if (weight >= W) {
             return false; // 무게 제한을 초과한 경우
@@ -82,6 +82,6 @@ public class Knapsack {
         if (j < n) {
             bound += (W - totWeight) * ((double) p[j] / w[j]);
         }
-        return bound > maxProfit;
+        return bound > maxProfit; // true면 promising해서 리턴
     }
 }
