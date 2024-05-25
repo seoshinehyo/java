@@ -1,5 +1,4 @@
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
@@ -11,21 +10,21 @@ public class Knapsack {
     static int[] include; // 지금까지 어떤 물건 선택했는지("yes"면 선택, "no"면 건너뛴 item)
 
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\82105\\Desktop\\SSH\\3-1\\소웨공\\SWE\\src\\instance.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\82105\\Desktop\\SSH\\3-1\\소웨공\\SWE\\src\\instance.txt")); // 파일 읽기
 
-        // 첫 번째 줄: 항목 수, 최대 무게
+        // 첫 번째 줄 : # of items - n, maximum weight - W
         String[] firstLine = reader.readLine().split(" ");
         int n = Integer.parseInt(firstLine[0]);
         int W = Integer.parseInt(firstLine[1]);
 
-        // 두 번째 줄: 항목의 무게
+        // 두 번째 줄 : list of weights of items separated by space - w[]
         String[] secondLine = reader.readLine().split(" ");
         int[] w = new int[n];
         for (int i = 0; i < n; i++) {
             w[i] = Integer.parseInt(secondLine[i]);
         }
 
-        // 세 번째 줄: 항목의 이익
+        // 세 번째 줄 : list of profits of items separted by space - p[]
         String[] thirdLine = reader.readLine().split(" ");
         int[] p = new int[n];
         for (int i = 0; i < n; i++) {
