@@ -63,24 +63,29 @@ public class Knapsack {
 
     // promising한지 검사하는 메서드
     public static boolean promising(int i, int profit, int weight, int[] w, int[] p, int W, int n) {
+        int j, k;
+        int totWeight;
+        double bound;
+
         if (weight >= W) {
             return false; // 무게 제한을 초과한 경우
-        }
-        int j = i;
-        int totWeight = weight;
-        double bound = profit;
+        } else {
+            j = i;
+            totWeight = weight;
+            bound = profit;
 
-        // 남은 항목들의 이익을 무게에 맞게 추가함
-        while (j < n && totWeight + w[j] <= W) {
-            totWeight += w[j];
-            bound += p[j];
-            j++;
+            // 남은 항목들의 이익을 무게에 맞게 추가함
+            while (j < n && totWeight + w[j] <= W) {
+                totWeight += w[j];
+                bound += p[j];
+                j++;
+            }
+            k = j;
+            // 쪼갤 수 있기때문에, W 여유값이 있으면 쪼개서 bound 값에 더해줌
+            if (k < n) {
+                bound += (W - totWeight) * ((double) p[k] / w[k]);
+            }
+            return bound > maxProfit; // true면 promising해서 리턴
         }
-
-        // 쪼갤 수 있기때문에, W 여유값이 있으면 쪼개서 bound 값에 더해줌
-        if (j < n) {
-            bound += (W - totWeight) * ((double) p[j] / w[j]);
-        }
-        return bound > maxProfit; // true면 promising해서 리턴
     }
 }
