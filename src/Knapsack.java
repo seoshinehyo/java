@@ -68,7 +68,7 @@ public class Knapsack {
         double bound;
 
         if (weight >= W) {
-            return false; // 무게 제한을 초과한 경우
+            return false; // weight 넘치면 nonpromissing
         } else {
             j = i;
             totWeight = weight;
