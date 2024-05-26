@@ -31,7 +31,7 @@ public class Knapsack {
             p[i] = Integer.parseInt(thirdLine[i]);
         }
 
-        reader.close();
+        reader.close(); // 파일 닫기
 
         bestSet = new int[n];
         include = new int[n];
