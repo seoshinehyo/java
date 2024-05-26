@@ -42,8 +42,8 @@ public class Knapsack {
         knapsack(0, 0, 0, w, p, W, n); // index, profit, weight의 초기값은 전부 0
 
         // 결과 출력
-        System.out.println("Optimal solution: " + Arrays.toString(bestSet).replaceAll("[\\[\\],]", ""));
-        System.out.println("Maximum profit: " + maxProfit);
+        System.out.println("Optimal solution: " + Arrays.toString(bestSet).replaceAll("[\\[\\],]", "")); // 출력 형식에 맞게 변경
+        System.out.println("Maximum profit: " + maxProfit); // Maximum profit값 출력
     }
 
     private static void sortItems(int[] w, int[] p, int n) {
