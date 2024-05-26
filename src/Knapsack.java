@@ -37,7 +37,7 @@ public class Knapsack {
         include = new int[n];
 
         // 아이템들을 pi/wi 비율에 따라 정렬
-        sortItems(w, p, n);
+        sortItems(w, p, n); // 정렬 메서드 호출
 
         knapsack(0, 0, 0, w, p, W, n); // index, profit, weight의 초기값은 전부 0
 
