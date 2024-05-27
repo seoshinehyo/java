@@ -10,7 +10,7 @@ public class Knapsack {
     static int[] include; // 지금까지 어떤 물건 선택했는지("yes"면 선택, "no"면 건너뛴 item)
 
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\82105\\Desktop\\SSH\\3-1\\소웨공\\SWE\\src\\instance3.txt")); // 파일 읽기
+        BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\82105\\Desktop\\SSH\\3-1\\소웨공\\SWE\\src\\instance3.txt")); // 파일 절대 경로로 읽기
 
         // 첫 번째 줄 : # of items - n, maximum weight - W
         String[] firstLine = reader.readLine().split(" ");
