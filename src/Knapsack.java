@@ -95,7 +95,7 @@ public class Knapsack {
         double bound;
 
         if (weight >= W) {
-            return false; // weight 넘치면 nonpromissing
+            return false; // weight 넘치면 nonpromising
         } else {
             j = i;
             totWeight = weight;
