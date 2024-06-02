@@ -3,7 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 
-public class Knapsack {
+public class A2_SanghyoSeo {
     static int maxProfit = 0; // 지금까지의 best값
     static int numBest = 0; // best 달성했을때의 레벨
     static int[] bestSet; // best 만드는 set 저장
