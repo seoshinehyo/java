@@ -1,5 +1,5 @@
 package gof.adapter;
 
-public interface ModuleIF {
+public interface ModuleIF { // 인터페이스
     void connect();
 }
