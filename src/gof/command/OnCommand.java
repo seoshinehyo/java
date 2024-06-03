@@ -1,6 +1,6 @@
 package gof.command;
 
-public class OnCommand implements Command{ // Command 구현
+public class OnCommand implements Command{ // Command를 구현한 OnCammand
     private final Receiver receiver;
 
     public OnCommand(Receiver receiver) { // Receover를 파라미터로 받음, 하나일 수도, 여러 개 있을 수도 있음
