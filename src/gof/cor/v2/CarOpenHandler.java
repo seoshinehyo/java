@@ -1,6 +1,6 @@
 package gof.cor.v2;
 
-public abstract class CarOpenHandler {
+public abstract class CarOpenHandler { // v2 다시 확인하기
     protected CarOpenHandler prev;
     private OpenMethod method;
 
