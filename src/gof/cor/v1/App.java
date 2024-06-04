@@ -11,7 +11,7 @@ public class App { // 메인에서 필터 체인 만듬
 //        handler.setNext(h1);
 //        h1.setNext(h2);
         // chain 구성 -> 메서드 체이닝으로 붙여줌(setNext의 리턴값이 Handler이어야 함 -> Handelr 추상 클래스에서 return handler;)
-        handler.setNext(h2).setNext(h1); // setNext(h2)는 next인 h1 handler를 리턴
+        handler.setNext(h2).setNext(h1); // setNext(h2)는 next인 h1 handler를 리턴, 여기서 순서 지정
 
         boolean result = handler.open(OpenMethod.KEY); // KEY로 요청
         if(!result) {
